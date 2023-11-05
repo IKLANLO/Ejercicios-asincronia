@@ -22,7 +22,7 @@ axios.get('https://jsonplaceholder.typicode.com/users')
 
 const users = axios.get('https://jsonplaceholder.typicode.com/users')
 
-const usersFunction = () => console.log(users)
+const usersFunction = () => users.then((res) => console.log(res))
 
 const usersDOMFunction = () => {
     axios.get('https://jsonplaceholder.typicode.com/users')
@@ -37,3 +37,6 @@ const usersDOMFunction = () => {
 
 usersBtn.addEventListener('click',usersFunction)
 usersDOM.addEventListener('click', usersDOMFunction)
+
+// EXTRAS
+
